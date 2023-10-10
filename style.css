@@ -1,0 +1,1143 @@
+@charset "utf-8";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size: 16px;
+    vertical-align:baseline;
+    background:transparent;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+  font-family: 'Noto Serif JP', serif;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: #000;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* ===================
+共通設定
+====================*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+section {
+  padding: 5rem 8% 10rem;
+}
+
+section:nth-of-type(1) {
+  padding: 5rem 8%;
+}
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 2;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 5rem;
+  letter-spacing: .15em;
+}
+
+.container {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+.sp {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* ===================
+header
+====================*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* background: rgba(255, 255, 255, .4); */
+  background: rgba(0, 0, 0, .6);
+}
+
+.header .logo {
+  font-size: 2rem;
+  /* color: #242424; */
+  color: #fff;
+}
+
+.header .navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.header .navbar ul li a {
+  color: #fff;
+}
+
+.header .navbar ul li a:hover {
+  opacity: .5;
+}
+
+
+#menu-btn {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  /* color: #242424; */
+  display: none;
+}
+
+#menu-btn span {
+  display: block;
+  font-size: .5rem;
+}
+
+
+
+/* ===================
+visual
+====================*/
+
+.visual .swiper-wrapper {
+  height: 90vh;
+  width: 100%;
+}
+
+.visual .swiper-wrapper .swiper-slide {
+  width: 100%;
+}
+
+
+.visual .swiper-wrapper .swiper-slide:nth-of-type(1) {
+  background-image: url(img/visual01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.visual .swiper-wrapper .swiper-slide:nth-of-type(2) {
+  background-image: url(img/visual02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.visual .swiper-wrapper .swiper-slide:nth-of-type(3) {
+  background-image: url(img/visual03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* .visual .swiper-wrapper .swiper-slide:nth-of-type(4) {
+  background-image: url(img/visual04.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
+
+.visual .swiper-wrapper .sp-visual {
+  display: none;
+}
+
+.visual img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===================
+about
+====================*/
+.about {
+  background-image: url(img/bg1.JPEG);
+}
+
+.about .container .about-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about .container .about-container .about-text h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 2;
+  color: #2f2f2f;
+  margin-bottom: 2rem;
+}
+
+.about .container .about-container .about-text p {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 2;
+  letter-spacing: .15rem;
+  color: #2f2f2f;
+}
+
+.about img {
+  vertical-align: bottom;
+}
+
+
+.about-area {
+  /* background: #070000; */
+  background-image: url(img/bg4.jpg);
+  color: #fff;
+}
+
+.visual-area  {
+  position: relative;
+}
+
+.visual-area p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #fff;
+}
+
+.visual-area p::before {
+  content: "-";
+  top: 50%;
+}
+
+.visual-area p::after {
+  content: "-";
+  top: 50%;
+}
+
+
+.visual-area img {
+  height: 400px;
+}
+
+.about-area .container .about-box  {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.about-area .container .about-box:nth-child(odd)  {
+  flex-direction: row-reverse;
+}
+
+.about-area .container .about-box h3  {
+  font-size: 2.5rem;
+}
+
+.about-area .container .about-box p  {
+  font-size: 1.2rem;
+  line-height: 2;
+  letter-spacing: .15rem;
+}
+
+.about-area .container .about-box img {
+  max-width: 600px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+.about-area .banner ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+
+.about-area .banner img {
+  height: 230px;
+}
+
+
+/* ===================
+about2
+====================*/
+
+.about2 {
+  background-image: url(img/bg2.JPEG);
+  background-size: cover;
+}
+
+.about2 .container .about-container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about2 .container .about-container p {
+  font-size: 1.1rem;
+  line-height: 2;
+  letter-spacing: .15rem;
+  color: #2f2f2f;
+}
+
+.about2 .container a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+  border: solid .1rem #aaa;
+  letter-spacing: .15rem;
+}
+.about2 .container a:hover {
+  opacity: .5;
+}
+
+.about2 .container i {
+  margin-right: 1rem;
+}
+
+
+/* ===================
+menu
+====================*/
+
+.menu {
+  background-image: url(img/bg3.JPEG);
+}
+
+.menu .container .box {
+  display: flex;
+  gap: 3rem;
+}
+
+.menu .container .box + .box {
+  margin-top: 5rem;
+}
+
+.menu .container .box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.menu .container .box .box-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .container .box .box-text .ttl {
+  font-size: 2rem;
+  line-height: 2;
+  margin-bottom: 3rem;
+  letter-spacing: .15rem;
+}
+
+.menu .container .box .box-text p {
+  line-height: 2;
+  letter-spacing: .15rem;
+}
+
+.menu .container .box .box-text a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  border: solid .1rem #2f2f2f;
+  letter-spacing: .15rem;
+}
+
+.menu .container .box .box-text a:hover {
+  opacity: .5;
+}
+
+.menu .container .box .box-text i {
+  margin-right: 1rem;
+}
+
+.menu .container .box .box-text a:first-of-type {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.menu .container .box img {
+  height: 350px;
+  object-fit: cover;
+}
+
+/* おしながき */
+
+.menu-area {
+  /* background-image: url(img/bg11.jpg); */
+  background-image: url(img/bg12.jpg);
+  /* background-image: url(img/bg4.jpg); */
+  /* color: #fff; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-area .container img {
+  width: 600px;
+  aspect-ratio: 2 / 1;
+  height: 400px;
+  object-fit: cover;
+}
+
+.menu-area > p {
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: .15rem;
+  margin-bottom: 1rem;
+}
+
+.menu-area .container .menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+  /* background-image: url(img/bg4.jpg); */
+}
+
+.menu-area .container .menu li:first-child {
+  font-size: 1.3rem;
+  line-height: 2;
+  font-weight: 700;
+  margin-bottom: .5rem;
+  border-bottom: .1rem solid #aaa;
+}
+
+.menu-area .container .menu li {
+  margin-bottom: .5rem;
+}
+
+
+/* ===================
+course
+====================*/
+
+.course-area {
+  background-image: url(img/bg13.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: #231816; */
+}
+
+.course-area .container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-area .container p {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 2;
+  text-align: center;
+  letter-spacing: .15rem;
+}
+
+.course-area .container .course ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem 1rem;
+}
+
+.course-area .container .course-list ul li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  border-bottom: .2rem solid #aaa;
+}
+
+.course-area .container .course-list ul li h3 {
+  font-size: 2rem;
+  line-height: 2;
+  font-weight: normal;
+  letter-spacing: .15rem;
+}
+
+.course-area .container .course-list ul li span{
+  font-size: 2rem;
+  line-height: 2;
+  font-weight: normal;
+  letter-spacing: .15rem;
+  position: absolute;
+  right: 0;
+}
+
+
+/* ===================
+contact
+====================*/
+.contact {
+  background-image: url(img/bg4.jpg);
+}
+
+.contact .heading {
+  color: #fff;
+}
+
+.contact .container .contact-box {
+  color: #fff;
+  text-align: center;
+}
+
+.contact .container .contact-box span {
+  font-size: 1.1rem;
+  line-height: 2;
+  letter-spacing: .15rem;
+}
+
+
+.contact .container .contact-box p {
+  font-size: 1.1rem;
+  line-height: 2;
+  letter-spacing: .15rem;
+}
+
+.contact .container .contact-box p:first-of-type {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+/* お問い合わせフォーム */
+.contact-area .heading {
+  color: #242424;
+}
+
+.contact-area .contact-container {
+  width: min(600px, 100%);
+  margin: 0 auto;
+}
+
+.contact-area p {
+  font-size: 1.1rem;
+  line-height: 2;
+  text-align: center;
+  border: .1rem solid #aaa;
+  width: min(600px, 100%);
+  padding: .5rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  color: #242424;
+}
+
+.contact-area p span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #B47849;
+  line-height: 2;
+}
+
+.contact-area .container form > div{
+  margin-bottom: 1rem;
+}
+
+.contact-area .container label {
+  display: block;
+  font-size: 1.1rem;
+  color: #242424;
+  letter-spacing: .1rem;
+}
+.contact-area .container label span {
+  background: red;
+  padding:  .1rem .2rem;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.contact-area .container input {
+  padding: .5rem;
+  width: -webkit-fill-available;
+  border: none;
+}
+
+.contact-area .container .half {
+  width: 30%;
+}
+
+.contact-area .container textarea {
+  width: 100%;
+  width: -webkit-fill-available;
+  display: block;
+  resize: none;
+  padding: .5rem;
+  border: none;
+}
+
+.contact-area .container form input:focus,
+.contact-area .container form textarea:focus {
+  outline: none;
+}
+
+.btn {
+  all: unset;
+  padding: .5rem 5rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #242424;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #242424;
+  color: #fff;
+}
+
+.contact-area,
+.map {
+  background-image: url(img/bg2.JPEG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.map .container iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.contact-area .contact-container table {
+  width: min(600px, 100%);
+}
+
+.contact-area .contact-container table tr {
+  display: table-row;
+}
+
+
+.contact-area .contact-container table th {
+  font-weight: normal;
+  padding: .5rem 1.1rem;
+  border: .1rem solid #fff;
+  border-collapse: collapse;
+  vertical-align: middle; /*中央寄せ*/
+}
+.contact-area .contact-container table td {
+  border: .1rem solid #fff;
+  border-collapse: collapse;
+  padding: .5rem;
+}
+
+.policy-area {
+  background-image: url(img/bg4.jpg);
+  color: #fff;
+}
+
+.policy-area h3 {
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  letter-spacing: .15rem;
+}
+
+.policy-area .contact-container:first-of-type {
+  margin-bottom: 2rem;
+}
+
+.policy-area .contact-container ul li {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+/* ===================
+footer
+====================*/
+.footer {
+  background-image: url(img/bg4.jpg);
+}
+
+.footer .footer-area ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 8%;
+  align-items: center;
+}
+
+.footer .footer-area ul li {
+  border-left: .1rem solid #fff;
+  border-right: .1rem solid #fff;
+  padding: 0 2rem;
+}
+
+.footer .footer-area ul li a {
+  color: #fff;
+  display: block;
+}
+
+.footer .footer-area ul li a:hover {
+  opacity: .5;
+}
+
+/* ===================
+レスポンシブ対応
+====================*/
+@media (max-width: 479px) {
+
+  html {
+    font-size: 14px;
+  }
+  
+
+  section {
+    padding: 5rem 8%;
+  }
+
+  .heading {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: rgba(0, 0, 0, .6);
+    width: 20rem;
+  }
+
+  .header .navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header .navbar ul li {
+    padding: 2rem;
+    border-bottom: .1rem solid #fff;
+  }
+
+  .header .navbar ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .header .navbar ul li a {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .visual .swiper-wrapper {
+    height: 70vh;
+  }
+  .visual .swiper-wrapper .swiper-slide {
+    display: none;
+  }
+
+  .visual .swiper-wrapper .sp-visual {
+    display: block;
+  }
+
+  .about .container .about-container {
+    flex-direction: column;
+  }
+
+  .about .container .about-container .about-text h3 {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about2 .container .about-container {
+    flex-direction: column;
+  }
+
+  .about2 .container a {
+    width: 100%;
+  }
+
+  .menu .container .box {
+    flex-direction: column;
+  }
+
+  .menu .container .box:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .menu .container .box .box-text .ttl {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu .container .box .box-text a {
+    width: 100%;
+  }
+
+  /* おもてなしページ */
+ 
+  .about-area .container .about-box {
+    flex-direction: column;
+  }
+
+  .about-area .container .about-box:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .about-area .banner ul {
+    grid-template-columns: auto;
+  }
+
+  /* お品書き */
+
+  .sp {
+    display: block;
+  }
+
+  .menu-area .container img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .menu-area .container .menu {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  /* 懐石・コース */
+  .course-area .container .course ul {
+    grid-template-columns: auto;
+  }
+  .course-area .container .course-list ul li span {
+    position: static;
+  }
+
+  /* お問い合わせ */
+  .contact-area .container .half {
+    width: 45%;
+  }
+
+  .footer .footer-area ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .footer .footer-area ul li {
+    border: none;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .footer .footer-area ul li a {
+    display: block;
+    text-align: center;
+  }
+
+  .footer .copy {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-top: .1rem solid #666;
+  }
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  #menu-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: rgba(0, 0, 0, .6);
+    width: 20rem;
+  }
+
+  .header .navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header .navbar ul li {
+    padding: 2rem;
+    border-bottom: .1rem solid #fff;
+  }
+
+  .header .navbar ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .header .navbar ul li a {
+    font-size: 18px;
+    color: #fff;
+  }
+
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .about .container .about-container {
+    flex-direction: column;
+  }
+
+  .about .container .about-container .about-text h3 {
+    text-align: center;
+  }
+
+  .about2 .container .about-container {
+    flex-direction: column;
+  }
+
+  /* about-menu */
+  .about-area .container .about-box {
+    flex-direction: column;
+  }
+  
+  .about-area .container .about-box:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .menu .container .box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu .container .box .box-text a {
+    margin: 0 auto;
+  }
+
+  .menu .container .box:nth-child(even) {
+    flex-direction: column;
+  }
+
+  /* おもてなしページ */
+  .about-area .container .about-box:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  /* お品書き */
+  .menu-area .container img {
+    width: 100%;
+  }
+
+  .menu-area .container .menu {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  /* 懐石・コース */
+  .course-area .container .course ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer .footer-area ul {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+
+  .footer .footer-area ul li {
+    border: none;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  #menu-btn {
+    display: block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: rgba(0, 0, 0, .6);
+    width: 20rem;
+  }
+
+  .header .navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header .navbar ul li {
+    padding: 2rem;
+    border-bottom: .1rem solid #fff;
+  }
+
+  .header .navbar ul li:last-of-type {
+    border-bottom: none;
+  }
+
+  .header .navbar ul li a {
+    font-size: 18px;
+    color: #fff;
+  }
+
+
+  .header .navbar.active {
+    right: 0;
+  }
+
+  .about .container .about-container {
+    flex-direction: column;
+  }
+
+  .about2 .container .about-container {
+    flex-direction: column;
+  }
+
+  .menu .container .box {
+    flex-direction: column;
+  }
+
+  .menu .container .box:nth-child(even) {
+    flex-direction: column;
+  }
+
+
+  /* おもてなしページ */
+  .about-area .container .about-box {
+    flex-direction: column;
+  }
+
+  .about-area .container .about-box:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  /* お品書き */
+  .menu-area .container .menu {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  .menu-area .container img {
+    width: 100%;
+  }
+
+  .footer .footer-area ul {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .footer .footer-area ul li {
+    border: none;
+    padding: 1rem;
+  }
+}
+
+/* ===================
+
+====================*/
+
+/* ===================
+
+====================*/
+
+/* ===================
+
+====================*/
